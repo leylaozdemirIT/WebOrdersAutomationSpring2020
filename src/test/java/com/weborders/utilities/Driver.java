@@ -19,13 +19,11 @@ public class Driver {
 
             switch (browser) {
                 case "chrome":
-                    System.setProperty("webdriver.chrome.driver", "C:\\Users\\hp\\IdeaProjects\\WebOrdersAutomationSpring2020\\chromedriver.exe");
+                    WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
                     break;
                 case "firefox":
-                    //WebDriverManager.firefoxdriver().setup();
-                    //System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "/Drivers/geckodriver");
-                    System.setProperty("webdriver.gecko.driver", "C:\\Users\\hp\\IdeaProjects\\WebOrdersAutomationSpring2020\\geckodriver.exe");
+                    WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     break;
                 default:
